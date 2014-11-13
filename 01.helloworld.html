@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hello">
+<head>
+<meta charset="UTF-8">
+<title>01.helloworld - angularjs</title>
+
+<style type="text/css">
+body{font-size: 16px; font-family:Arial, 'Microsoft Yahei', sans-serif;}
+</style>
+
+<script src="http://cdn.bootcss.com/angular.js/1.3.0-beta.13/angular.min.js"></script>
+
+<script>
+angular.module('hello', []).controller('HelloCtrl', ['$scope', function ($scope) {
+
+    $scope.name = '我给你传答案';
+
+    $scope.getName = function(){ return $scope.name; };
+
+}]);
+</script>
+
+</head>
+<body>
+
+<div ng-controller="HelloCtrl">
+    <h3>Hello, {{getName()}} !</h3>
+</div>
+
+</body>
+</html>
